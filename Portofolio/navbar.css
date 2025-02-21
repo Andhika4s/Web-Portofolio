@@ -1,0 +1,368 @@
+:root {
+  /* warna */
+  --white-color: #fff;
+  --primary: #4c0e0e;
+  --bg: #fff;
+  --sec-color: #f3961c;
+  --third-color: #010101;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Helvetica Neue";
+}
+body {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  background-color: #f3f2ef;
+  padding-top: 80px;
+  align-items: center;
+  height: 100vh;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 1.2rem;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: auto;
+}
+section {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+/*HEADER DAN NAVBAR*/
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5%;
+  background-color: #f3f2ef;
+  backdrop-filter: blur(10px);
+  transition: all 0.5s ease;
+  height: 80px;
+  border-bottom: 1px solid black;
+}
+
+.fotosaya {
+  font-size: 2.5rem;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.fotosaya:hover {
+  transform: scale(1.05);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+ul.horizontal {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+}
+
+ul.horizontal li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+ul.horizontal li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #f8ba4d;
+  transition: width 0.3s ease-in-out;
+}
+
+ul.horizontal li a:hover {
+  color: #f8ba4d;
+}
+
+ul.horizontal li a:hover::after {
+  width: 100%;
+}
+
+/* SECTION */
+
+.beranda {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 0rem;
+  overflow: hidden;
+}
+
+.logo-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 25px #f8ba4d;
+  cursor: pointer;
+  animation: floatImage 4s ease-in-out infinite;
+  transition: 0.4s ease;
+}
+.logo-img img:hover {
+  box-shadow: 0 0 25px #f8ba4d, 0 0 35px #f8ba4d, 0 0 45px #f8ba4d;
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+
+  /* section*/
+}
+.saya-content {
+  max-width: 700px;
+}
+
+.saya-content h3 {
+  font-size: 1.5rem;
+}
+
+.span {
+  color: #d4800c;
+  text-shadow: -5px -5px 10px #defaf6, 3px -5px 10px #defaf6,
+    -3px 5px 10px #defaf6;
+}
+
+.saya-content h1 {
+  font-size: 3.5rem;
+}
+
+.saya-content p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/*TENTANG SAYA*/
+.Saya {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  background: #010101;
+  padding: 4rem 0;
+  min-height: 90.1vh;
+  scroll-margin-top: 80px;
+  padding: 2rem 0;
+}
+
+.me {
+  color: #d4800c;
+}
+
+.heading {
+  max-width: 250vh;
+  text-align: center;
+  color: #f3f2ef;
+  transition: transform 0.5s ease-in-out;
+}
+
+.heading:hover {
+  transform: scale(1.05);
+}
+.tentangsaya-content {
+  text-align: center;
+  max-width: 80%;
+}
+
+.tentangsaya-content h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 1rem;
+}
+
+.tentangsaya-content p {
+  color: #f3f2ef;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  max-width: 180ch;
+}
+
+/*TENTANG AYAH*/
+.Ayah {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  background: floralwhite;
+  padding: 4rem 0;
+  min-height: 90.1vh;
+  scroll-margin-top: 80px;
+  padding: 2rem 0;
+}
+
+.father {
+  color: #d4800c;
+}
+
+.tentangayah-content {
+  text-align: center;
+  max-width: 80%;
+}
+
+.tentangayah-content h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 1rem;
+  transition: transform 0.5s ease-in-out;
+}
+.tentangayah-content h2:hover {
+  transform: scale(1.05);
+}
+
+.tentangayah-content p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  max-width: 150ch;
+}
+
+/* TENTANG IBU*/
+.Ibu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  padding: 4rem 0;
+  min-height: 90.1vh;
+  scroll-margin-top: 80px;
+  padding: 2rem 0;
+  background: black;
+  padding: 4rem 0;
+  min-height: 90.1vh;
+  scroll-margin-top: 80px;
+  padding: 2rem 0;
+}
+
+.mom {
+  color: #d4800c;
+}
+
+.tentangibu-content {
+  text-align: center;
+  max-width: 80%;
+}
+
+.tentangibu-content h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 1rem;
+  transition: transform 0.5s ease-in-out;
+  color: #f3f2ef;
+}
+.tentangibu-content h2:hover {
+  transform: scale(1.05);
+}
+
+.tentangibu-content p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  max-width: 150ch;
+  color: #f3f2ef;
+}
+
+/* TENTANG HOBI*/
+.Hobby {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  background: floralwhite;
+  padding: 4rem 0;
+  min-height: 90.1vh;
+  scroll-margin-top: 80px;
+  padding: 2rem 0;
+}
+
+.hobi {
+  color: #d4800c;
+}
+
+.tentanghobby-content {
+  text-align: center;
+  max-width: 80%;
+}
+
+.tentanghobby-content h2 {
+  font-size: 3.5rem;
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 1rem;
+  transition: transform 0.5s ease-in-out;
+}
+.tentanghobby-content h2:hover {
+  transform: scale(1.05);
+}
+
+.tentanghobby-content p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  max-width: 120ch;
+}
+.tentanghobby-content{
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center;
+}
+
+.basket-img img {
+  margin-top: 30px;
+  align-items: center;
+  justify-content:center;
+  width: 600px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 0 25px #f8ba4d;
+  cursor: pointer;
+  animation: floatImage 4s ease-in-out infinite;
+  transition: 0.4s ease;
+}
